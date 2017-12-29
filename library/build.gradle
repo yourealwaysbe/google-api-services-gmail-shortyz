@@ -17,8 +17,12 @@ android {
 
 dependencies {
     // is open-source
-    compile 'com.google.api-client:google-api-client:1.21.0'
-    compile 'com.google.api-client:google-api-client-android:1.21.0'
+    compile ('com.google.api-client:google-api-client:1.21.0') {
+        exclude group: 'org.apache.httpcomponents'
+    }
+    compile ('com.google.api-client:google-api-client-android:1.21.0') {
+        exclude group: 'org.apache.httpcomponents'
+    }
 }
 
 // build a jar with source files
